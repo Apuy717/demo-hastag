@@ -503,26 +503,26 @@ export default function Home() {
     },
   });
 
-  // useEffect(() => {
-  //   const options = {
-  //     method: "GET",
-  //     url: "https://instagram28.p.rapidapi.com/hash_tag_medias",
-  //     params: { hash_tag: "ginidoanggampang" },
-  //     headers: {
-  //       "X-RapidAPI-Key": "5ecd9a9d68mshb82a5356592cfb0p1563bdjsnab65cd0d72f4",
-  //       "X-RapidAPI-Host": "instagram28.p.rapidapi.com",
-  //     },
-  //   };
-  //   axios
-  //     .request(options)
-  //     .then(function (response) {
-  //       console.log(response.data);
-  //       setData(response.data);
-  //     })
-  //     .catch(function (error) {
-  //       console.error(error);
-  //     });
-  // }, []);
+  useEffect(() => {
+    const options = {
+      method: "GET",
+      url: "https://instagram28.p.rapidapi.com/hash_tag_medias",
+      params: { hash_tag: "ginidoanggampang" },
+      headers: {
+        "X-RapidAPI-Key": "5ecd9a9d68mshb82a5356592cfb0p1563bdjsnab65cd0d72f4",
+        "X-RapidAPI-Host": "instagram28.p.rapidapi.com",
+      },
+    };
+    axios
+      .request(options)
+      .then(function (response) {
+        console.log(response.data);
+        setData(response.data);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  }, []);
 
   return (
     <main className="flex min-h-screen flex-col p-10">
